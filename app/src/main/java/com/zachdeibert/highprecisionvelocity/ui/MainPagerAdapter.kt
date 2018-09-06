@@ -1,4 +1,4 @@
-package com.zachdeibert.highprecisionvelocity
+package com.zachdeibert.highprecisionvelocity.ui
 
 import android.support.v4.app.Fragment
 import android.support.v4.app.FragmentManager
