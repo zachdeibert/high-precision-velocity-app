@@ -1,6 +1,5 @@
 package com.zachdeibert.highprecisionvelocity.ui
 
-import android.Manifest
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.support.v7.app.AppCompatActivity
@@ -24,11 +23,11 @@ class MainActivity : AppCompatActivity() {
     }
 
     override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<out String>, grantResults: IntArray) {
-        var pager: ViewPager? = this.pager
+        val pager: ViewPager? = this.pager
         if (requestCode == RESTART_PERMISSION_REQUEST_CODE
                 && grantResults.any{ i -> i == PackageManager.PERMISSION_GRANTED }
                 && pager != null) {
-            var fragment: VelocityFragment = (pager.adapter as MainPagerAdapter).getItem(pager.currentItem) as VelocityFragment
+            val fragment: VelocityFragment = (pager.adapter as MainPagerAdapter).getItem(pager.currentItem) as VelocityFragment
             fragment.system?.start(this)
         }
     }

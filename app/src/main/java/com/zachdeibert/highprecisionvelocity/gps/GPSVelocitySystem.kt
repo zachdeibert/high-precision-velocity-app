@@ -19,7 +19,7 @@ import com.zachdeibert.highprecisionvelocity.Velocity
 import com.zachdeibert.highprecisionvelocity.VelocityProvider
 import com.zachdeibert.highprecisionvelocity.ui.MainActivity
 
-class GPSVelocitySystem() : IVelocitySystem, LocationListener {
+class GPSVelocitySystem : IVelocitySystem, LocationListener {
     override val name: String
         get() = "GPS Velocity"
     private var _velocity: VelocityProvider = VelocityProvider()
@@ -52,7 +52,7 @@ class GPSVelocitySystem() : IVelocitySystem, LocationListener {
     }
 
     override fun start(activity: Activity) {
-        var location: LocationManager = activity.getSystemService(Context.LOCATION_SERVICE) as LocationManager
+        val location: LocationManager = activity.getSystemService(Context.LOCATION_SERVICE) as LocationManager
         if (ContextCompat.checkSelfPermission(activity, Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
             location.requestLocationUpdates(LocationManager.GPS_PROVIDER, 0, 0f, this)
             Log.i("GPSVelocitySystem", "Location updates requested")
@@ -64,7 +64,7 @@ class GPSVelocitySystem() : IVelocitySystem, LocationListener {
 
     override fun stop(activity: Activity) {
         Log.i("GPSVelocitySystem", "Location updates stopped")
-        var location: LocationManager = activity.getSystemService(Context.LOCATION_SERVICE) as LocationManager
+        val location: LocationManager = activity.getSystemService(Context.LOCATION_SERVICE) as LocationManager
         location.removeUpdates(this)
     }
 

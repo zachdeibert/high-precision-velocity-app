@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">High Precision Velocity</string>
+    <string name="accuracy_label">Accuracy</string>
 </resources>

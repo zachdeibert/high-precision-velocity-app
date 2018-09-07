@@ -9,7 +9,7 @@ class MainPagerAdapter(fm: FragmentManager) : FragmentPagerAdapter(fm) {
     private var fragments: Array<Fragment> = arrayOf(VelocityFragment.newInstance(GPSVelocitySystem::class.java))
 
     override fun getItem(position: Int): Fragment {
-        return fragments.get(position)
+        return fragments[position]
     }
 
     override fun getCount(): Int {

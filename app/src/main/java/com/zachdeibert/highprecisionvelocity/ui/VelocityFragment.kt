@@ -22,7 +22,7 @@ class VelocityFragment : Fragment(), IVelocityListener {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         Log.i("VelocityFragment", "onCreateView")
-        var view: View? = inflater.inflate(R.layout.fragment_velocity, container, false)
+        val view: View? = inflater.inflate(R.layout.fragment_velocity, container, false)
         titleView = view?.findViewById(R.id.title)
         velocityView = view?.findViewById(R.id.velocity)
         accuracyView = view?.findViewById(R.id.accuracy)
@@ -33,9 +33,9 @@ class VelocityFragment : Fragment(), IVelocityListener {
     override fun setArguments(args: Bundle?) {
         Log.i("VelocityFragment", "setArguments")
         super.setArguments(args)
-        var clsname: String? = args?.getString("system")
-        if (clsname != null) {
-            var cls: Class<*> = Class.forName(clsname)
+        val classname: String? = args?.getString("system")
+        if (classname != null) {
+            val cls: Class<*> = Class.forName(classname)
             _system = cls.newInstance() as IVelocitySystem
             titleView?.text = system?.name
         }
