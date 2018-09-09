@@ -1,4 +1,19 @@
-<resources>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="app_name">High Precision Velocity</string>
     <string name="accuracy_label">Accuracy</string>
+    <string name="gps_velocity_label">GPS Velocity</string>
+    <string name="velocity_format">
+        <xliff:g id="value" example="1.23">%1$.2f</xliff:g>
+        <xliff:g id="distance_unit" example="m">%2$s</xliff:g>/<xliff:g id="time_unit" example="s">%3$s</xliff:g>
+    </string>
+    <string name="accuracy_format">
+        &#x00B1;
+        <xliff:g id="accuracy" example="1.23">%1$.1f</xliff:g>
+        <xliff:g id="distance_unit" example="m">%2.$s</xliff:g>/<xliff:g id="time_unit" example="s">%3.$s</xliff:g>
+        &#x00a0;
+        <xliff:g id="confidence" example="68.0">%4$.0f</xliff:g>%% confidence
+    </string>
+    <string name="unit_meter_short">m</string>
+    <string name="unit_second_short">s</string>
+    <string name="velocity_unknown">Unknown</string>
 </resources>

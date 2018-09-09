@@ -43,12 +43,12 @@ class VelocityFragment : Fragment(), IVelocityListener {
 
     override fun velocityChanged(velocity: Velocity) {
         Log.i("VelocityFragment", "velocityChanged")
-        velocityView?.text = String.format("%.2f m/s", velocity.velocity)
+        velocityView?.text = getString(R.string.velocity_format, velocity.velocity, getString(R.string.unit_meter_short), getString(R.string.unit_second_short))
         accuracyView?.text =
             if (velocity.accuracy.isFinite())
-                String.format("± %.1f m/s\\n%.0f%% confidence", velocity.accuracy, velocity.confidence * 100.0)
+                getString(R.string.accuracy_format, velocity.accuracy, getString(R.string.unit_meter_short), getString(R.string.unit_second_short), velocity.confidence * 100.0)
             else
-                "Unknown"
+                getString(R.string.velocity_unknown)
     }
 
     override fun onResume() {
