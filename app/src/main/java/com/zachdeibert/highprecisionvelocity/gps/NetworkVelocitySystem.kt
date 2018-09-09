@@ -15,13 +15,14 @@ import android.support.v4.app.ActivityCompat
 import android.support.v4.content.ContextCompat
 import android.util.Log
 import com.zachdeibert.highprecisionvelocity.IVelocitySystem
+import com.zachdeibert.highprecisionvelocity.R
 import com.zachdeibert.highprecisionvelocity.Velocity
 import com.zachdeibert.highprecisionvelocity.VelocityProvider
 import com.zachdeibert.highprecisionvelocity.ui.MainActivity
 
 class NetworkVelocitySystem : IVelocitySystem, LocationListener {
-    override val name: String
-        get() = "Network-Based Velocity"
+    override val name: Int
+        get() = R.string.network_velocity_label
     private var _velocity: VelocityProvider = VelocityProvider()
     override val velocity: VelocityProvider
         get() = _velocity

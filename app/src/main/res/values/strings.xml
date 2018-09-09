@@ -2,6 +2,7 @@
     <string name="app_name">High Precision Velocity</string>
     <string name="accuracy_label">Accuracy</string>
     <string name="gps_velocity_label">GPS Velocity</string>
+    <string name="network_velocity_label">Network-Based Velocity</string>
     <string name="velocity_format">
         <xliff:g id="value" example="1.23">%1$.2f</xliff:g>
         <xliff:g id="distance_unit" example="m">%2$s</xliff:g>/<xliff:g id="time_unit" example="s">%3$s</xliff:g>

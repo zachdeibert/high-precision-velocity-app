@@ -26,7 +26,10 @@ class VelocityFragment : Fragment(), IVelocityListener {
         titleView = view?.findViewById(R.id.title)
         velocityView = view?.findViewById(R.id.velocity)
         accuracyView = view?.findViewById(R.id.accuracy)
-        titleView?.text = system?.name
+        val system: IVelocitySystem? = _system
+        if (system != null) {
+            titleView?.text = getString(system.name)
+        }
         return view
     }
 
@@ -37,7 +40,10 @@ class VelocityFragment : Fragment(), IVelocityListener {
         if (classname != null) {
             val cls: Class<*> = Class.forName(classname)
             _system = cls.newInstance() as IVelocitySystem
-            titleView?.text = system?.name
+            val system: IVelocitySystem? = _system
+            if (system != null) {
+                titleView?.text = getString(system.name)
+            }
         }
     }
 

@@ -4,7 +4,7 @@ import android.app.Activity
 import android.os.Parcelable
 
 interface IVelocitySystem : Parcelable {
-    val name: String
+    val name: Int
     val velocity: VelocityProvider
 
     fun start(activity: Activity)
