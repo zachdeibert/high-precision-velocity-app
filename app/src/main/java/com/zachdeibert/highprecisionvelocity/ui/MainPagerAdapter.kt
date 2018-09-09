@@ -5,11 +5,13 @@ import android.support.v4.app.FragmentManager
 import android.support.v4.app.FragmentPagerAdapter
 import com.zachdeibert.highprecisionvelocity.gps.GPSVelocitySystem
 import com.zachdeibert.highprecisionvelocity.gps.NetworkVelocitySystem
+import com.zachdeibert.highprecisionvelocity.gps.PassiveVelocitySystem
 
 class MainPagerAdapter(fm: FragmentManager) : FragmentPagerAdapter(fm) {
     private var fragments: Array<Fragment> = arrayOf(
             VelocityFragment.newInstance(GPSVelocitySystem::class.java),
-            VelocityFragment.newInstance(NetworkVelocitySystem::class.java)
+            VelocityFragment.newInstance(NetworkVelocitySystem::class.java),
+            VelocityFragment.newInstance(PassiveVelocitySystem::class.java)
     )
 
     override fun getItem(position: Int): Fragment {
