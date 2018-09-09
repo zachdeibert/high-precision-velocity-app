@@ -1,4 +1,4 @@
-package com.zachdeibert.highprecisionvelocity.gps
+package com.zachdeibert.highprecisionvelocity.location
 
 import android.app.Activity
 import android.content.Context

@@ -3,9 +3,9 @@ package com.zachdeibert.highprecisionvelocity.ui
 import android.support.v4.app.Fragment
 import android.support.v4.app.FragmentManager
 import android.support.v4.app.FragmentPagerAdapter
-import com.zachdeibert.highprecisionvelocity.gps.GPSVelocitySystem
-import com.zachdeibert.highprecisionvelocity.gps.NetworkVelocitySystem
-import com.zachdeibert.highprecisionvelocity.gps.PassiveVelocitySystem
+import com.zachdeibert.highprecisionvelocity.location.GPSVelocitySystem
+import com.zachdeibert.highprecisionvelocity.location.NetworkVelocitySystem
+import com.zachdeibert.highprecisionvelocity.location.PassiveVelocitySystem
 
 class MainPagerAdapter(fm: FragmentManager) : FragmentPagerAdapter(fm) {
     private var fragments: Array<Fragment> = arrayOf(
